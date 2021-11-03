@@ -19,7 +19,7 @@ public class MessageRepository {
         return (List<Message>) crud.findAll();
     }
 
-    public Optional<Message> getMessage(int id){
+    public Optional<Message> getMessage(Long id){
         return crud.findById(id);
     }
 

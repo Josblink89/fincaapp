@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import co.edu.usa.backend.model.Reservation;
 
-public interface ReservationInterface extends CrudRepository<Reservation,Integer>{
+public interface ReservationInterface extends CrudRepository<Reservation,Long>{
     
 }

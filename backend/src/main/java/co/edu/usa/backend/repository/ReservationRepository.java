@@ -19,7 +19,7 @@ public class ReservationRepository {
         return (List<Reservation>) crud.findAll();
     }
 
-    public Optional<Reservation> getReservation(int id){
+    public Optional<Reservation> getReservation(Long id){
         return crud.findById(id);
     }
 

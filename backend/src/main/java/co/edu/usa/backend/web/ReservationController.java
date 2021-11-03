@@ -33,7 +33,7 @@ public class ReservationController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Reservation> getReservation(@PathVariable("id") int reservationId) {
+    public Optional<Reservation> getReservation(@PathVariable("id") Long reservationId) {
         return servicio.getReservation(reservationId);
     }
     @PostMapping("/save")
@@ -48,7 +48,7 @@ public class ReservationController {
     }
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int reservationId) {
+    public boolean delete(@PathVariable("id") Long reservationId) {
         return servicio.delete(reservationId);
     }
 }

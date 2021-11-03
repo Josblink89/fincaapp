@@ -19,7 +19,7 @@ public class CategoryRepository {
         return (List<Category>) crud.findAll();
     }
 
-    public Optional<Category> getCategory(int id){
+    public Optional<Category> getCategory(Long id){
         return crud.findById(id);
     }
 

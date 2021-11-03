@@ -19,7 +19,7 @@ public class ClientService {
        return metCrud.getAll();
    }
     
-     public Optional<Client> getClient(int clientId) {
+     public Optional<Client> getClient(Long clientId) {
        return metCrud.getClient(clientId);
    }
 
@@ -62,7 +62,7 @@ public class ClientService {
        }
    }
 
-   public boolean delete(int id) {
+   public boolean delete(Long id) {
        Boolean aBoolean = getClient(id).map(client -> {
            metCrud.delete(client);
            return true;

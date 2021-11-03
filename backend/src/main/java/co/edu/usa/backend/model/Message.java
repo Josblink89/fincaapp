@@ -18,7 +18,7 @@ public class Message implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idMessage;
+    private Long idMessage;
 
     
     private String messageText;
@@ -33,11 +33,11 @@ public class Message implements Serializable{
     @JsonIgnoreProperties({"messages", "reservations"})
     private Client client;
 
-    public Integer getIdMessage() {
+    public Long getIdMessage() {
         return idMessage;
     }
 
-    public void setIdMessage(Integer idMessage) {
+    public void setIdMessage(Long idMessage) {
         this.idMessage = idMessage;
     }
 

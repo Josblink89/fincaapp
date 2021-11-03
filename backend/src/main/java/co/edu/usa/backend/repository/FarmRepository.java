@@ -19,7 +19,7 @@ public class FarmRepository {
         return (List<Farm>) crud.findAll();
     }
 
-    public Optional<Farm> getFarm(int id){
+    public Optional<Farm> getFarm(Long id){
         return crud.findById(id);
     }
 

@@ -33,7 +33,7 @@ public class FarmController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Farm> getBike(@PathVariable("id") int bikeId) {
+    public Optional<Farm> getBike(@PathVariable("id") Long bikeId) {
         return servicio.getFarm(bikeId);
     }
 
@@ -50,7 +50,7 @@ public class FarmController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int bikeId) {
+    public boolean delete(@PathVariable("id") Long bikeId) {
         return servicio.delete(bikeId);
     } 
 }

@@ -33,7 +33,7 @@ public class CategoryController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Category> getCategoria(@PathVariable("id") int categoriaId) {
+    public Optional<Category> getCategoria(@PathVariable("id") Long categoriaId) {
         return servicio.getCategory(categoriaId);
     }
 
@@ -50,7 +50,7 @@ public class CategoryController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int categoriaId) {
+    public boolean delete(@PathVariable("id") Long categoriaId) {
         return servicio.delete(categoriaId);
     }
 }

@@ -19,7 +19,7 @@ public class ClientRepository {
         return (List<Client>) crud.findAll();
     }
 
-    public Optional<Client> getClient(int id){
+    public Optional<Client> getClient(Long id){
         return crud.findById(id);
     }
 

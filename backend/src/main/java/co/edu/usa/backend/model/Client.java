@@ -19,7 +19,7 @@ public class Client implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idClient;
+    private Long idClient;
     private String email;
     private String password;
     private String name;
@@ -33,11 +33,11 @@ public class Client implements Serializable {
     @JsonIgnoreProperties("client")
     public List<Reservation> reservations;
 
-    public Integer getIdClient() {
+    public Long getIdClient() {
         return idClient;
     }
 
-    public void setIdClient(Integer idClient) {
+    public void setIdClient(Long idClient) {
         this.idClient = idClient;
     }
 

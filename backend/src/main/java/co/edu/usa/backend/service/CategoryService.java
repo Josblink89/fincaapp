@@ -19,7 +19,7 @@ public class CategoryService {
         return metCrud.getAll();
     }
 
-    public Optional<Category> getCategory(int id){
+    public Optional<Category> getCategory(Long id){
         return metCrud.getCategory(id);
     }
 
@@ -52,7 +52,7 @@ public class CategoryService {
         return category;
     }
 
-    public boolean delete(int id){
+    public boolean delete(Long id){
         Boolean elem = getCategory(id).map(category -> {
             metCrud.delete(category);
             return true;

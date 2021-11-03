@@ -19,7 +19,7 @@ public class Reservation implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idReservation;
+    private Long idReservation;
 
     private Date startDate;
     private Date devolutionDate;
@@ -37,11 +37,11 @@ public class Reservation implements Serializable{
 
     private String score;
 
-    public Integer getIdReservation() {
+    public Long getIdReservation() {
         return idReservation;
     }
 
-    public void setIdReservation(Integer idReservation) {
+    public void setIdReservation(Long idReservation) {
         this.idReservation = idReservation;
     }
 

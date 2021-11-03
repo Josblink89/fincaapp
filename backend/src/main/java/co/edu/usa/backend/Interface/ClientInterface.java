@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import co.edu.usa.backend.model.Client;
 
-public interface ClientInterface extends CrudRepository<Client,Integer>{
+public interface ClientInterface extends CrudRepository<Client,Long>{
     
 }

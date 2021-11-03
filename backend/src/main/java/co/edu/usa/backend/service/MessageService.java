@@ -19,7 +19,7 @@ public class MessageService {
         return metCrud.getAll();
     }
 
-    public Optional<Message> getMessage(int messageId) {
+    public Optional<Message> getMessage(Long messageId) {
         return metCrud.getMessage(messageId);
     }
 
@@ -53,7 +53,7 @@ public class MessageService {
         }
     }
 
-    public boolean delete(int messageId) {
+    public boolean delete(Long messageId) {
         Boolean aBoolean = getMessage(messageId).map(message -> {
             metCrud.delete(message);
             return true;

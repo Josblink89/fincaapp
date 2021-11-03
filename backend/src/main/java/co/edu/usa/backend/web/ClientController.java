@@ -34,7 +34,7 @@ public class ClientController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Client> getClient(@PathVariable("id") int clientId) {
+    public Optional<Client> getClient(@PathVariable("id") Long clientId) {
         return servicio.getClient(clientId);
     }
 
@@ -51,7 +51,7 @@ public class ClientController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int clientId) {
+    public boolean delete(@PathVariable("id") Long clientId) {
         return servicio.delete(clientId);
     }
 }

@@ -18,7 +18,7 @@ public class FarmService {
     public List<Farm> getAll(){
        return metCrud.getAll();
    }
-   public Optional<Farm> getFarm(int idFarm) {
+   public Optional<Farm> getFarm(Long idFarm) {
        return metCrud.getFarm(idFarm);
    }
 
@@ -64,7 +64,7 @@ public class FarmService {
    }
 
 
-   public boolean delete(int farmId) {
+   public boolean delete(Long farmId) {
        Boolean aBoolean = getFarm(farmId).map(farm -> {
            metCrud.delete(farm);
            return true;

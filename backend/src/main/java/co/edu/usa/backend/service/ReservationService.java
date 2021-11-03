@@ -19,7 +19,7 @@ public class ReservationService {
         return metCrud.getAll();
     }
 
-    public Optional<Reservation> getReservation(int reservationId) {
+    public Optional<Reservation> getReservation(Long reservationId) {
         return metCrud.getReservation(reservationId);
     }
 
@@ -60,7 +60,7 @@ public class ReservationService {
         }
     }
 
-    public boolean delete(int reservationId) {
+    public boolean delete(Long reservationId) {
         Boolean aBoolean = getReservation(reservationId).map(reservation -> {
             metCrud.delete(reservation);
             return true;

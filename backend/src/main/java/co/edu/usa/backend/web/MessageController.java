@@ -33,7 +33,7 @@ public class MessageController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Message> getMessage(@PathVariable("id") int messageId) {
+    public Optional<Message> getMessage(@PathVariable("id") Long messageId) {
         return servico.getMessage(messageId);
     }
 
@@ -50,7 +50,7 @@ public class MessageController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int messageId) {
+    public boolean delete(@PathVariable("id") Long messageId) {
         return servico.delete(messageId);
     }
 }
