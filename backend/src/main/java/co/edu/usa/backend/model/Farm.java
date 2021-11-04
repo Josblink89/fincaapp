@@ -30,7 +30,7 @@ public class Farm implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "idfarm")
-    @JsonIgnoreProperties("farm")
+    @JsonIgnoreProperties("farms")
     private Category category;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "farm")
