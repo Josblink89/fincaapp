@@ -24,7 +24,7 @@ public class Reservation implements Serializable{
     private Date startDate;
     private Date devolutionDate;
     private String status="created";
-
+    
     @ManyToOne
     @JoinColumn(name = "farmId")
     @JsonIgnoreProperties("reservations")

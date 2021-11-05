@@ -27,6 +27,7 @@ public class Farm implements Serializable{
     private String address;
     private Integer extension;
     private String description;
+    
 
     @ManyToOne
     @JoinColumn(name = "idfarm")

@@ -6,4 +6,6 @@ import co.edu.usa.backend.model.Category;
 
 public interface CategoryInterface extends CrudRepository<Category,Long>{
     
+
+    
 }

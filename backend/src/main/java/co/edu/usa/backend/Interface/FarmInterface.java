@@ -5,5 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import co.edu.usa.backend.model.Farm;
 
 public interface FarmInterface extends CrudRepository<Farm,Long>{
+
+
     
 }
